@@ -133,7 +133,7 @@ var questionArray = {
 	feedbackRandom: 0
 };
 
-//Traverse the various pages
+//Traverse the pages
 function setPath(questionArray, path) {
 	questionArray.path = path;
 }
@@ -159,7 +159,7 @@ function selectFeedback(questionArray) {
 	questionArray.feedbackRandom = Math.random();
 }
 
-//if quiz is not over, it will continue
+//if quiz is not over, continue
 function advance(questionArray) {
 	questionArray.currentQuestionIndex++;
 	if (questionArray.currentQuestionIndex === questionArray.questions.length) {
@@ -194,14 +194,14 @@ function renderQuiz(questionArray, elements) {
 	}
 }
 
-//This displays question page
+//Displays question page
 function renderQuestionPage(questionArray, element) {
 	renderQuestionCount(questionArray, element.find('.question-count'));
 	renderQuestionText(questionArray, element.find('.question-text'));
 	renderChoices(questionArray, element.find('.choices'));
 }
 
-//This displays feedback after each question and has 'next' button
+//Displays feedback after each question and has 'next' button
 function renderAnswerFeedbackPage(questionArray, element) {
 	renderAnswerFeedbackHeader(questionArray, element.find('.feedback-header'));
 	renderAnswerFeedbackText(questionArray, element.find('.feedback-text'));
@@ -210,7 +210,7 @@ function renderAnswerFeedbackPage(questionArray, element) {
 	renderCurrentScore(questionArray, element.find('.current-score'));
 }
 
-//Display final feedback after the quiz
+//Final feedback after the quiz
 function renderFinalFeedbackPage(questionArray, element) {
 	renderFinalFeedbackText(questionArray, element.find('.results-text'));
 }
@@ -237,8 +237,6 @@ function renderExplanation(questionArray, element) {
 function renderCurrentScore(questionArray, element) {
 	var score = questionArray.score;
 	var currentQuestionIndex = questionArray.currentQuestionIndex;
-	/*var scoreElement = $('.current-score'); 
-  scoreElement.text("Your score is " + score + "/" + currentQuestionIndex);*/
 }
 
 //Render the choices
@@ -282,7 +280,7 @@ function renderNextButtonText(questionArray, element) {
 	element.text(text);
 }
 
-//What will be displayed when quiz is completed
+//Displayed when quiz is completed
 function renderFinalFeedbackText(questionArray, element) {
 	var text = 'You got ' + questionArray.score + ' out of ' + questionArray.questions.length + ' questions right.';
 
