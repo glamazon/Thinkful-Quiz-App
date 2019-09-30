@@ -1,21 +1,103 @@
-h1,
-h3 {
-	text-align: center;
+html {
+	background-image: url("images/records.jpg");
+	height: 100%;
+	margin: 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.blue-square-container {
+.title {
 	text-align: center;
+	font-size: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: whitesmoke;
+
+	color: whitesmoke;
+	text-shadow: 2px 2px 4px #000000;
+	font-family: 'Poiret One', cursive;
+	font-weight: bold;
 }
 
-.blue-square {
-	background-color: lightgray;
-	width: 400px;
-	height: 400px;
-	display: inline-block;
+p,
+h2,
+.questions-page,
+.answer-feedback-page,
+.final-feedback-page,
+.current-question,
+.choices {
+	text-align: center;
+	font-size: 26px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: whitesmoke;
+	text-shadow: 2px 2px 4px #000000;
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+}
+
+.user-was-correct::before {
+	content: "Excellent! You are ";
+}
+
+.user-was-correct::after {
+	content: "!";
+}
+
+.user-was-incorrect::before {
+	content: "You are ";
+}
+
+.user-was-correct {
+	font-size: 40px;
+	color: whitesmoke;
+	font-weight: bold;
+	font-family: 'Poppins', sans-serif;
+}
+
+.user-was-incorrect {
+	font-size: 40px;
+	color: red;
+	font-weight: bold;
+	font-family: 'Poppins', sans-serif;
 }
 
 button {
-	align-content: center;
-	background-color: lightcoral;
+	width: auto;
+	background-color: #ac9e91;
+	color: whitesmoke;
 	border-radius: 5px;
+	border: 2px solid whitesmoke;
+	font-size: 20px;
+	text-align: center;
+	margin: auto;
+	margin-top: 30px;
+	display: block;
+}
+
+button:hover {
+	background-color: #505221;
+}
+
+#choices {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 65%;
+	letter-spacing: 0.04em;
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.explanation {
+	padding: 25px;
+	margin: auto;
+}
+
+.current-score {
+	font-family: "Arial";
+	color: white;
+	text-shadow: 2px 2px 4px #000000;
+	font-weight: bold;
+	font-size: 24px;
 }

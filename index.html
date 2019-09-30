@@ -1,25 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Quiz App</title>
-  <link rel="stylesheet" type="text/css" href="main.css" />
+  <title>Thinkful Quiz App</title>
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Poppins|Poiret+One&display|Arial" rel="stylesheet">
+
 </head>
+
 <body>
-  <h1>Quiz</h1>
-  
-  <h3>Intro</h3>
-  <div class="blue-square-container">
-    <div class="blue-square"></div>
+
+  <div class="container">
+
+    <div class="start-page">
+      <header class="title" role="banner">
+        <h1>Outlaw Country Music Quiz</h1>
+      </header>
+      <h2>So you think you know outlaw country music? Let's see if you can earn a shot of whiskey!</h2>
+      <p>You will be presented with three lies and one truth! This is a play on a famous quote coined in the 1950's by songwriter
+      Harlan Howard. He described country music as "Three Cords and the Truth".</p>
+      <form class="game-start">
+        <button type="submit" class="btn1">Giddy Up</button>
+      </form>
+    </div>
+
+
+
+    <div class="questions-page">
+      <h3><span class="question-count"></span> : <span class="question-text"></span></h3>
+      <form name="current-question">
+        <fieldset class="choices">
+          <legend>Question Choices</legend>
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button class="restart-game">New Game</button>
+      </form>
+    </div>
+
+    <div class="answer-feedback-page">
+      <div class="feedback-container">
+        <div class="feedback-header"></div>
+        <div class="explanation"></div>
+        <p class="feedback-text"></p>
+        <button class="see-next"></button>
+      </div>
+    </div>
+
+    <div class="current-score"></div>
+
+    <div class="final-feedback-page">
+      <h1>Results</h1>
+      <p class="results-text"></p>
+      <button class="restart-game">Start Over</button>
+    </div>
+
   </div>
-  
-<div style="text-align:center;">
-  <button>Start Quiz</button>
- 
-</div>
-  
-  
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+  <script src="index.js" type="text/javascript"></script>
+
 </body>
+
 </html>
